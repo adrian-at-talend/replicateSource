@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2018-10-02T09:40:14.689+0100">
-  <deletedItems id="_X6Lc4MYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_YrIYsMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_XwTvMMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_YO690MYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_X0xYcMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_YZrcUMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_Ygl8oMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_XgUycMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_YHqfQMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_XmiIIMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_XrvYQMYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-  <deletedItems id="_YyK00MYSEeiiCtQbPS64ww" path="web" type="MDM.View"/>
-</recyclebin:RecycleBin>
+<recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin" lastUpdate="2018-10-02T09:40:21.341+0100"/>
