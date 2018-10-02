@@ -1,0 +1,629 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://www.w3.org/2001/XMLSchema"/>
+<xsd:element name="party">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="partymdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="partyId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="partyName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="partyDesc" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="partyType" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="liveStatus" type="xsd:boolean">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="party">
+<xsd:selector xpath="."/>
+<xsd:field xpath="partymdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="organisation">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="organisationmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="organisationId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="organisationName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="dunsnumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="vatnumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="party" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="organisation">
+<xsd:selector xpath="."/>
+<xsd:field xpath="organisationmdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="address">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="addressmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="addressId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="addressType" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">addressType/addressTypemdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="houseNumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="street1" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="street2" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="street3" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="city" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="postcode" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="country" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">country/countrymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="address">
+<xsd:selector xpath="."/>
+<xsd:field xpath="addressmdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="country">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="countrymdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="countryId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="iso3code" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="countryName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="country">
+<xsd:selector xpath="."/>
+<xsd:field xpath="countrymdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="person">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="personmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="personId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="title" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="firstName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="middleName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="lastName" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="dob" type="xsd:date">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="gender" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">gender/gendermdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="address" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">address/addressmdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="niNumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="employeeNumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="jobtitle" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">jobTitle/jobTitlemdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="party" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="person">
+<xsd:selector xpath="."/>
+<xsd:field xpath="personmdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="gender">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="gendermdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="genderId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="genderType" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="genderDesc" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="gender">
+<xsd:selector xpath="."/>
+<xsd:field xpath="gendermdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="addressType">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="addressTypemdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="addressTypeId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="addressType" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="addressTypeDesc" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="addressType">
+<xsd:selector xpath="."/>
+<xsd:field xpath="addressTypemdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="jobTitle">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="jobTitlemdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="jobTitleId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="jobTitle" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="jobTitleDesc" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="jobTitle">
+<xsd:selector xpath="."/>
+<xsd:field xpath="jobTitlemdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="emails">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="emailsmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="emailId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="emailAddress" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="activeDate" type="xsd:date">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="defaultContact" type="xsd:boolean">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="person" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">person/personmdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="emails">
+<xsd:selector xpath="."/>
+<xsd:field xpath="emailsmdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="phones">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="phonesmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="phoneId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="stdCode" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="phoneNumber" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="defaultContact" type="xsd:boolean">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="person" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">person/personmdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="country" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">country/countrymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="phones">
+<xsd:selector xpath="."/>
+<xsd:field xpath="phonesmdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="relationshipType">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="relationshipTypemdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="relationTypeId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="relationTypeDesc" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="relationshipType">
+<xsd:selector xpath="."/>
+<xsd:field xpath="relationshipTypemdmId"/>
+</xsd:unique>
+</xsd:element>
+<xsd:element name="relationships">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+<xsd:complexType>
+<xsd:all>
+<xsd:element maxOccurs="1" minOccurs="1" name="relationshipsmdmId" type="xsd:string">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="relationshipId" type="xsd:int">
+<xsd:annotation>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="relationshipType" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">relationshipType/relationshipTypemdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="party" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="partylinked" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_ForeignKey">party/partymdmId</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+
+<xsd:appinfo source="X_Write">MasterMDM</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+</xsd:all>
+</xsd:complexType>
+<xsd:unique name="relationships">
+<xsd:selector xpath="."/>
+<xsd:field xpath="relationshipsmdmId"/>
+</xsd:unique>
+</xsd:element>
+</xsd:schema>
